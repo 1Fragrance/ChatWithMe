@@ -21,8 +21,7 @@ namespace ChatWithMe.Storage
             {
                 throw new ArgumentNullException(nameof(builder));
             }
-
-            // TODO: Add relationships
+            
 
             base.OnModelCreating(builder);
         }

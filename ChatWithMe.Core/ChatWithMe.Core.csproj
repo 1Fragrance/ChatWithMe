@@ -11,6 +11,12 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ChatWithMe.Common\ChatWithMe.Common.csproj" />
+      <ProjectReference Include="..\ChatWithMe.Storage\ChatWithMe.Storage.csproj" />
     </ItemGroup>
 
 </Project>

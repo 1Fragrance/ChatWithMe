@@ -8,10 +8,10 @@ namespace ChatWithMe.Storage.Entities
     public abstract class EntityBase
     {
         /// <summary>
-        /// Entity id in database
+        /// Entity identificator
         /// </summary>
         public abstract int Id { get; set; }
-        
+
         /// <summary>
         /// Entity create date
         /// </summary>

@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ChatWithMe.Common;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace ChatWithMe.Web.Controllers
 {
@@ -10,6 +13,12 @@ namespace ChatWithMe.Web.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IOptions<AppConfig> _config;
+        public ValuesController(IOptions<AppConfig> options)
+        {
+            _config = options;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

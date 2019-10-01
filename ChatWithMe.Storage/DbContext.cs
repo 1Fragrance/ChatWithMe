@@ -15,6 +15,9 @@ namespace ChatWithMe.Storage
         protected internal virtual DbSet<UserEntity> UserSet { get; set; }
         protected internal virtual DbSet<MessageEntity> MessageSet { get; set; }
 
+        public DbContext(DbContextOptions<DbContext> options) : base(options)
+        { }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             if (builder == null)

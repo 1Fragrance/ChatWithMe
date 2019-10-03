@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using ChatWithMe.Storage;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChatWithMe.Web
@@ -28,10 +29,11 @@ namespace ChatWithMe.Web
                 throw new ArgumentNullException(nameof(services));
             }
 
-            //services.Configure<AppConfig>(Configuration);
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.Configure<AppConfig>(Configuration);
 
-            services.AddDbContext<Storage.DbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ChatWithMe.Db")));
+            services.AddTransient<DatabaseContext>();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

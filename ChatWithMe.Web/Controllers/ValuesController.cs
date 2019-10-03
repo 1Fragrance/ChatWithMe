@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ChatWithMe.Common;
+﻿using ChatWithMe.Common;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
+using ChatWithMe.Storage;
 
 namespace ChatWithMe.Web.Controllers
 {
@@ -14,7 +11,7 @@ namespace ChatWithMe.Web.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly IOptions<AppConfig> _config;
-        public ValuesController(IOptions<AppConfig> options)
+        public ValuesController(IOptions<AppConfig> options, DatabaseContext context)
         {
             _config = options;
         }

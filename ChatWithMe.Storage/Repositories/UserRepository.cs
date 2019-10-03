@@ -1,5 +1,5 @@
-﻿using ChatWithMe.Storage.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using ChatWithMe.Storage.Abstractions;
+using ChatWithMe.Storage.Entities;
 
 namespace ChatWithMe.Storage.Repositories
 {
@@ -8,7 +8,7 @@ namespace ChatWithMe.Storage.Repositories
     /// </summary>
     public class UserRepository : RepositoryBase<UserEntity>
     {
-        public UserRepository(DbContext dbContext) : base(dbContext.UserSet, dbContext)
+        public UserRepository(DatabaseContext dbContext) : base(dbContext.Users, dbContext)
         {
         }
     }

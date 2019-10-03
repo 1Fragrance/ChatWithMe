@@ -31,7 +31,7 @@ namespace ChatWithMe.Web
 
             services.Configure<AppConfig>(Configuration);
 
-            services.AddTransient<DatabaseContext>();
+            services.AddScoped<DatabaseContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

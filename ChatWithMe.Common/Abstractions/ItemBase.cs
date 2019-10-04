@@ -11,6 +11,6 @@ namespace ChatWithMe.Common.Abstractions
         /// <summary>
         /// Item identificator
         /// </summary>
-        public ObjectId Id { get; set; }
+        public ObjectId? Id { get; set; }
     }
 }

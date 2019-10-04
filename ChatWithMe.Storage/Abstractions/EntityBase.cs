@@ -16,11 +16,6 @@ namespace ChatWithMe.Storage.Abstractions
         public ObjectId ObjectId { get; set; }
 
         /// <summary>
-        /// Entity identificator
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Entity create date
         /// </summary>
         public DateTime CreateDate { get; set; }

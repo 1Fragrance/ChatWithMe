@@ -1,3 +1,6 @@
+using System.Runtime.Serialization;
+using MongoDB.Bson;
+
 namespace ChatWithMe.Common.Items
 {
     /// <summary>
@@ -5,6 +8,9 @@ namespace ChatWithMe.Common.Items
     /// </summary>
     public abstract class ItemBase
     {
-        
+        /// <summary>
+        /// Item identificator
+        /// </summary>
+        public ObjectId Id { get; set; }
     }
 }

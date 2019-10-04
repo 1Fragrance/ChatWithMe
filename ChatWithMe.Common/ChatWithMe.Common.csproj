@@ -9,4 +9,10 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="MongoDB.Bson">
+        <HintPath>C:\Users\GalkinIV\.nuget\packages\mongodb.bson\2.9.2\lib\netstandard1.5\MongoDB.Bson.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

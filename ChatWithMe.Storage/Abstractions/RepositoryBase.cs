@@ -17,5 +17,8 @@ namespace ChatWithMe.Storage.Abstractions
             Collection = collection;
             DbContext = dbContext;
         }
+        
+        // TODO: Investigate about template mongo CRUD methods
+
     }
 }

@@ -1,3 +1,5 @@
+using MongoDB.Bson;
+
 namespace ChatWithMe.Storage.Abstractions
 {
     /// <summary>
@@ -8,6 +10,6 @@ namespace ChatWithMe.Storage.Abstractions
         /// <summary>
         /// Entity identificator
         /// </summary>
-        public int? Id { get; set; }
+        public ObjectId? ObjectId { get; set; }
     }
 }

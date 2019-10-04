@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ChatWithMe.Storage.Repositories;
+﻿using ChatWithMe.Storage.Repositories;
+using System;
 
 namespace ChatWithMe.Storage
 {

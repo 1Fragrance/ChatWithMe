@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using ChatWithMe.Core.Extensions;
 using ChatWithMe.Storage;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,6 +31,9 @@ namespace ChatWithMe.Web
             }
 
             services.Configure<AppConfig>(Configuration);
+
+            services.AddApplicationServices(Configuration);
+            services.AddDataProviders(Configuration);
 
             services.AddScoped<DatabaseContext>();
 

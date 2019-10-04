@@ -1,8 +1,8 @@
 ﻿using ChatWithMe.Common;
+using ChatWithMe.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
-using ChatWithMe.Storage;
 
 namespace ChatWithMe.Web.Controllers
 {
@@ -11,9 +11,10 @@ namespace ChatWithMe.Web.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly IOptions<AppConfig> _config;
-        public ValuesController(IOptions<AppConfig> options, DatabaseContext context)
+        public ValuesController(IOptions<AppConfig> options, IAuthService service)
         {
             _config = options;
+            service.Register("1","2","3");
         }
 
         // GET api/values

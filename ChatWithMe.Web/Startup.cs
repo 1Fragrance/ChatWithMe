@@ -45,6 +45,8 @@ namespace ChatWithMe.Web
             services.AddScoped<DatabaseContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +68,10 @@ namespace ChatWithMe.Web
             app.UseCookiePolicy();
 
             app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}"));
+
+            //app.UseSignalR(routes =>
+            //{
+            //});
         }
     }
 }

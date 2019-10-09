@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ChatWithMe.Web.Models;
 using Microsoft.AspNetCore.Mvc;
-using ChatWithMe.Web.Models;
+using System.Diagnostics;
 
 namespace ChatWithMe.Web.Controllers
 {

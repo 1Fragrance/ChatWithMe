@@ -20,9 +20,4 @@
     <ProjectReference Include="..\ChatWithMe.Core\ChatWithMe.Core.csproj" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="Hubs\" />
-  </ItemGroup>
-
 </Project>

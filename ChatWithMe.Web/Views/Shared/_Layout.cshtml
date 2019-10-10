@@ -4,26 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container">
-        <div>
-            <ul class="nav navbar-nav">
-                <li class="nav-item active"><a href="~/Auth/SignIn" class="navbar-brand">Sign In</a></li>
-                <li class="nav-item active"><a href="~/Auth/SignUp" class="navbar-brand">Sign Up</a></li>
-                <li class="nav-item active"><a href="~/Auth/SignOut" class="navbar-brand">Sign Out</a></li>
-            </ul>
-        </div>
+    <div>
+        <ul>
+            <li><a href="~/Auth/SignIn" >Sign In</a></li>
+            <li><a href="~/Auth/SignUp" >Sign Up</a></li>
+            <li><a href="~/Auth/SignOut">Sign Out</a></li>
+        </ul>
     </div>
-</nav>
-<div class="container body-content">
-    @RenderBody()
-    <hr />
-    <footer>
-        <p>© 2019 - ChatWithMe</p>
-    </footer>
-</div>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>© 2019 - ChatWithMe</p>
+        </footer>
+    </div>
 </body>
 </html>

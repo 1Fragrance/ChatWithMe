@@ -35,7 +35,7 @@
   align-items: center;
 }
 
-.header-links li:hover {
+.header-links li:hover:not(.link-active) {
   background-color: #666ad1;
   transition: 0.3s; 
 }
@@ -56,7 +56,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .default-form {
@@ -65,7 +65,7 @@
   padding: 20px;
   text-align: center;
   display: flex;
-  width : 65%;
+  width : 50%;
   flex-direction: column;
   align-items: center;
   font-family: 'Noto Sans', sans-serif;

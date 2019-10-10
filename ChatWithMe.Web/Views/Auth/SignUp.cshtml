@@ -1,33 +1,35 @@
-﻿@{
+﻿@model ChatWithMe.Web.Models.Auth.SignUpModel
+@{
     ViewData["Title"] = "ChatWithMe | Sign Up";
 }
 
 <div class="form-layout">
     <div class="default-form">
         <h2>Sign Up</h2>
-        <form class="auth-form" method="post" role="form">
+        @using (Html.BeginForm("SignIn", "Auth", FormMethod.Post, new { @class = "auth-form" }))
+        {
             <div class="form-input">
-                <label for="Username">Username:</label>
-                <input type="text" name="Username" class="form-control" />
+                @Html.LabelFor(x => x.Username, "Username")
+                @Html.TextBoxFor(x => x.Username)
             </div>
 
             <div class="form-input">
-                <label for="Email">Email:</label>
-                <input type="email" name="Email" class="form-control" />
+                @Html.LabelFor(x => x.Email, "Email")
+                @Html.TextBoxFor(x => x.Email, "", new { type = "email" })
             </div>
 
             <div class="form-input">
-                <label for="Password">Password:</label>
-                <input type="password" name="Password" class="form-control" />
+                @Html.LabelFor(x => x.Password, "Password")
+                @Html.PasswordFor(x => x.Password)
             </div>
 
             <div class="form-input">
-                <label for="ConfirmPassword">Confirm password:</label>
-                <input type="password" name="ConfirmPassword" class="form-control" />
+                @Html.LabelFor(x => x.ConfirmPassword, "Confirm password")
+                @Html.PasswordFor(x => x.ConfirmPassword)
             </div>
             <div class="form-input">
                 <button type="submit">Send</button>
             </div>
-        </form>
+        }
     </div>
 </div>

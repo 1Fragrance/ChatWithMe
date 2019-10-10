@@ -10,17 +10,17 @@
 <body>
     <div class="header-layout">
         <div class="header-logo">
-            <a href="~/Auth/SignUp">ChatWithMe</a>
+            @Html.ActionLink("ChatWithMe", "SignUp", "Auth")
         </div>
         <ul class="header-links">
             <li class="link-active">
-                <a href="~/Auth/SignIn">Sign In</a>
+                @Html.ActionLink("Sign Up", "SignUp", "Auth")
             </li>
             <li>
-                <a href="~/Auth/SignUp">Sign Up</a>
+                @Html.ActionLink("Sign In", "SignIn", "Auth")
             </li>
             <li>
-                <a href="~/Auth/SignOut">Sign Out</a>
+                @Html.ActionLink("Sign Out", "SignOut", "Auth")
             </li>
         </ul>
     </div>

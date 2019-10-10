@@ -35,7 +35,7 @@ namespace ChatWithMe.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Logout()
+        public IActionResult SignOut()
         {
             return Ok();
         }

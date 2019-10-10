@@ -5,6 +5,7 @@ namespace ChatWithMe.Web.Models.Auth
     public class SignUpModel 
     {
         [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Username is required")]
@@ -13,7 +14,7 @@ namespace ChatWithMe.Web.Models.Auth
         [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Passwords do not match")]
+        [Required(ErrorMessage = "Confirm password is required")]
         [Compare("Password", ErrorMessage = "Passwords do not match")]
         public string ConfirmPassword { get; set; }
     }

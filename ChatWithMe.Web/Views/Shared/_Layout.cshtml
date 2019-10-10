@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/site.css" />
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" asp-append-version="true">
 </head>
 <body>
     <div class="header-layout">
         <div class="header-logo">
-            @Html.ActionLink("ChatWithMe", "SignUp", "Auth")
+            <a asp-controller="Auth" asp-action="SignUp">Sign Up</a>
         </div>
         <ul class="header-links">
             <li class="link-active">
-                @Html.ActionLink("Sign Up", "SignUp", "Auth")
+                <a asp-controller="Auth" asp-action="SignUp">Sign Up</a>
             </li>
             <li>
-                @Html.ActionLink("Sign In", "SignIn", "Auth")
+                <a asp-controller="Auth" asp-action="SignIn">Sign In</a>
             </li>
             <li>
-                @Html.ActionLink("Sign Out", "SignOut", "Auth")
+                <a asp-controller="Auth" asp-action="SignOut">Sign Out</a>
             </li>
         </ul>
     </div>

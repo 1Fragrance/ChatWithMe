@@ -1,56 +1,142 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿body {
+  margin:0;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
+/* Header */
+.header-layout {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  justify-content: space-between;
+  background-color: #303f9f;
   width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  height: 3rem;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.header-layout .header-logo {
+  background-color: #303f9f;
+  display: flex;
+  padding: 0 1rem;
+  justify-content: flex-start;
+}
+
+.header-layout .header-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0;
+  height: 100%;
+}
+
+.header-links li {
+  display: flex;
+  align-items: center;
+}
+
+.header-links li:hover {
+  background-color: #666ad1;
+  transition: 0.3s; 
+}
+
+.header-layout a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.header-links .link-active {
+  background-color: #001970;
+}
+
+/* forms */
+.form-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.default-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  width : 65%;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  margin-top: 0.9rem;
+}
+
+/* Inputs */
+.form-input input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.form-input button {
+  background-color: white;
+  color:  #303f9f;
+  border: 1px solid #303f9f;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+.form-input button::before, ::after {
+  position: absolute;
+  border-radius: 0.3rem;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #303f9f;
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+  opacity: .5;
+  z-index: -1;
+}
+
+.form-input button::after {
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.form-input button:hover::before,
+.form-input button:hover::after {
+  left: 0;
+}
+
+.form-input button:hover{
+  color: white;
 }

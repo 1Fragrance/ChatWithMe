@@ -2,29 +2,32 @@
     ViewData["Title"] = "ChatWithMe | Sign Up";
 }
 
-<h3>Sign Up</h3>
-<form method="post" role="form">
-    <label for="Username">Username:</label>
-    <div class="col-md-4">
-        <input type="text" name="Username" class="form-control" />
-    </div>
+<div class="form-layout">
+    <div class="default-form">
+        <h2>Sign Up</h2>
+        <form class="auth-form" method="post" role="form">
+            <div class="form-input">
+                <label for="Username">Username:</label>
+                <input type="text" name="Username" class="form-control" />
+            </div>
 
-    <label for="Email">Email:</label>
-    <div class="col-md-4">
-        <input type="email" name="Email" class="form-control" />
-    </div>
+            <div class="form-input">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" class="form-control" />
+            </div>
 
-    <label for="Password">Password:</label>
-    <div class="col-md-4">
-        <input type="password" name="Password" class="form-control" />
-    </div>
+            <div class="form-input">
+                <label for="Password">Password:</label>
+                <input type="password" name="Password" class="form-control" />
+            </div>
 
-    <label for="ConfirmPassword">Confirm password:</label>
-    <div class="col-md-4">
-        <input type="password" name="ConfirmPassword" class="form-control" />
+            <div class="form-input">
+                <label for="ConfirmPassword">Confirm password:</label>
+                <input type="password" name="ConfirmPassword" class="form-control" />
+            </div>
+            <div class="form-input">
+                <button type="submit">Send</button>
+            </div>
+        </form>
     </div>
-
-    <div>
-        <input type="submit" class="btn btn-default" value="Send" />
-    </div>
-</form>
+</div>

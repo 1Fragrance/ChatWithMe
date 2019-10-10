@@ -4,21 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <ul>
-            <li><a href="~/Auth/SignIn" >Sign In</a></li>
-            <li><a href="~/Auth/SignUp" >Sign Up</a></li>
-            <li><a href="~/Auth/SignOut">Sign Out</a></li>
+    <div class="header-layout">
+        <div class="header-logo">
+            <a href="~/Auth/SignUp">ChatWithMe</a>
+        </div>
+        <ul class="header-links">
+            <li class="link-active">
+                <a href="~/Auth/SignIn">Sign In</a>
+            </li>
+            <li>
+                <a href="~/Auth/SignUp">Sign Up</a>
+            </li>
+            <li>
+                <a href="~/Auth/SignOut">Sign Out</a>
+            </li>
         </ul>
     </div>
     <div>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>© 2019 - ChatWithMe</p>
-        </footer>
     </div>
 </body>
 </html>

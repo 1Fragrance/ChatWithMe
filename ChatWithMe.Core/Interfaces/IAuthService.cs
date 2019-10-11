@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ChatWithMe.Common.Infrastructure;
 
 namespace ChatWithMe.Core.Interfaces
 {
     public interface IAuthService
     {
-        void Register(string username, string email, string password);
+        ExecutionResult SignUp(string password, string email, string username);
 
-        void Logout();
+        ExecutionResult SignOut();
 
-        void Login(string username, string password);
+        ExecutionResult SignIn(string username, string password);
 
-        void ChangePassword(string oldPassword, string newPassword);
+        ExecutionResult ChangePassword(string oldPassword, string newPassword);
     }
 }

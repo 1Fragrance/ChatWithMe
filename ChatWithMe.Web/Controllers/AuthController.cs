@@ -1,10 +1,18 @@
-﻿using ChatWithMe.Web.Models.Auth;
+﻿using ChatWithMe.Core.Interfaces;
+using ChatWithMe.Web.Models.Auth;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChatWithMe.Web.Controllers
 {
     public class AuthController : Controller
     {
+        private readonly IAuthService _authService;
+        public AuthController(IAuthService authService)
+        {
+            _authService = authService;
+        }
+
+
         [HttpGet]
         public IActionResult SignIn()
         {
@@ -12,7 +20,7 @@ namespace ChatWithMe.Web.Controllers
         }
 
         [HttpPost]
-        public string SignIn(SignInModel model)
+        public string SignIn(SignInViewModel model)
         {
             return "abc";
         }
@@ -25,14 +33,26 @@ namespace ChatWithMe.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult SignUp(SignUpModel model)
+        public IActionResult SignUp(SignUpViewModel model)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return View(model);
+                var result = _authService.SignUp(model.Password, model.Email, model.Username);
+
+                if (result.IsSuccess)
+                {
+                    RedirectToAction("SignIn", "Auth");
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(error.Key, error.Description);
+                    }
+                }
             }
 
-            return Ok();
+            return View(model); ;
         }
 
         [HttpPost]

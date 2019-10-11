@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 namespace ChatWithMe.Web.Models.Auth
 {
-    public class SignUpModel 
+    public class SignUpViewModel
     {
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Invalid email")]

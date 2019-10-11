@@ -3,7 +3,7 @@ using ChatWithMe.Web.ValidationAttributes;
 
 namespace ChatWithMe.Web.Models.Auth
 {
-    public class ChangePasswordModel
+    public class ChangePasswordViewModel
     {
         [Required(ErrorMessage = "Old password is required")]
         public string OldPassword { get; set; }

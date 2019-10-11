@@ -7,7 +7,6 @@
 
 
   <ItemGroup>
-    <PackageReference Include="IdentityServer4" Version="2.5.3" />
     <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.5.3" />
     <PackageReference Include="IdentityServer4.EntityFramework" Version="2.5.3" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -15,17 +14,14 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
 
   <ItemGroup>
+    <ProjectReference Include="..\ChatWithMe.Common\ChatWithMe.Common.csproj" />
     <ProjectReference Include="..\ChatWithMe.Core\ChatWithMe.Core.csproj" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Auth\" />
   </ItemGroup>
 
 </Project>

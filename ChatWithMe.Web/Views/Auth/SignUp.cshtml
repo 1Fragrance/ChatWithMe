@@ -1,4 +1,4 @@
-﻿@model ChatWithMe.Web.Models.Auth.SignUpModel
+﻿@model ChatWithMe.Web.Models.Auth.SignUpViewModel
 @{
     ViewData["Title"] = "ChatWithMe | Sign Up";
 }
@@ -14,19 +14,19 @@
             </div>
 
             <div class="form-input">
-                <label asp-for="Email">Email  <sup class="field-required">*</sup></label>
+                <label asp-for="Email">Email <sup class="field-required">*</sup></label>
                 <input type="email" asp-for="Email">
                 <span asp-validation-for="Email"></span>
             </div>
 
             <div class="form-input">
-                <label asp-for="Password">Password  <sup class="field-required">*</sup></label>
+                <label asp-for="Password">Password <sup class="field-required">*</sup></label>
                 <input type="password" asp-for="Password">
                 <span asp-validation-for="Password"></span>
             </div>
 
             <div class="form-input">
-                <label asp-for="ConfirmPassword">Confirm password  <sup class="field-required">*</sup></label>
+                <label asp-for="ConfirmPassword">Confirm password <sup class="field-required">*</sup></label>
                 <input type="password" asp-for="ConfirmPassword">
                 <span asp-validation-for="ConfirmPassword"></span>
             </div>

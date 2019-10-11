@@ -2,7 +2,7 @@
 
 namespace ChatWithMe.Web.Models.Auth
 {
-    public class SignInModel
+    public class SignInViewModel
     {
         [Required(ErrorMessage = "Username is required")]
         public string Username { get; set; }

@@ -1,15 +1,16 @@
-﻿using ChatWithMe.Core.Interfaces;
+﻿using ChatWithMe.AuthStorage;
+using ChatWithMe.Core.Interfaces;
 using ChatWithMe.DataStorage;
 
 namespace ChatWithMe.Core.Logic.Auth
 {
     public class AuthService : IAuthService
     {
-        private readonly DataSource _database;
+        private readonly AuthDataSource _authDatabase;
 
-        public AuthService(DataSource database)
+        public AuthService(AuthDataSource authDatabase)
         {
-            _database = database;
+            _authDatabase = authDatabase;
         }
 
         public void Register(string username, string email, string password)

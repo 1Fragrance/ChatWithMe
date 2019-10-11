@@ -1,7 +1,7 @@
-﻿using ChatWithMe.Core.Interfaces;
+﻿using ChatWithMe.AuthStorage;
+using ChatWithMe.Core.Interfaces;
 using ChatWithMe.Core.Logic.Auth;
 using ChatWithMe.DataStorage;
-using ChatWithMe.Storage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,6 +17,7 @@ namespace ChatWithMe.Core.Extensions
         public static void AddDataProviders(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<DataSource>();
+            services.AddScoped<AuthDataSource>();
         }
     }
 }

@@ -1,15 +1,16 @@
 ﻿using System;
-using ChatWithMe.Storage;
 
-namespace ChatWithMe.DataStorage
+namespace ChatWithMe.Storage
 {
     public class DataSource : IDisposable
     {
         protected DatabaseContext MongoContext { get; }
+        public AuthContext SqlContext { get; }
 
-        public DataSource(DatabaseContext mongoContext)
+        public DataSource(DatabaseContext mongoContext, AuthContext sqlContext)
         {
             MongoContext = mongoContext;
+            SqlContext = sqlContext;
         }
 
         // public UserRepository Users => new UserRepository(Context);

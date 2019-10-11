@@ -1,8 +1,8 @@
-using MongoDB.Bson.Serialization.Attributes;
 using System;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
-namespace ChatWithMe.Storage.Abstractions
+namespace ChatWithMe.DataStorage.Abstractions
 {
     /// <summary>
     /// Base entity class

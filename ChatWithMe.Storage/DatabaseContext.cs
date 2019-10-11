@@ -1,5 +1,4 @@
 ﻿using ChatWithMe.Common;
-using ChatWithMe.Storage.Entities;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
@@ -19,11 +18,11 @@ namespace ChatWithMe.Storage
         /// <summary>
         /// Data providers
         /// </summary>
-        public IMongoCollection<UserEntity> Users => _db.GetCollection<UserEntity>("Users");
+        //public IMongoCollection<UserEntity> Users => _db.GetCollection<UserEntity>("Users");
     }
 
     public interface IMongoContext
     {
-        IMongoCollection<UserEntity> Users { get; }
+        //IMongoCollection<UserEntity> Users { get; }
     }
 }

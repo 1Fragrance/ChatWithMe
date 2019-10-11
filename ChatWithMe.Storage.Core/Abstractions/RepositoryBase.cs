@@ -1,7 +1,4 @@
-using ChatWithMe.Storage;
-using MongoDB.Driver;
-
-namespace ChatWithMe.DataStorage.Abstractions
+namespace ChatWithMe.Storage.Abstractions
 {
     /// <summary>
     /// Repository base class

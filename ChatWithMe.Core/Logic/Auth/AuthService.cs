@@ -1,9 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using ChatWithMe.Common;
-using ChatWithMe.Common.Enums;
-using ChatWithMe.Core.Interfaces;
-using ChatWithMe.Storage;
-using ChatWithMe.Storage.Entities;
+﻿using ChatWithMe.Core.Interfaces;
+using ChatWithMe.DataStorage;
 
 namespace ChatWithMe.Core.Logic.Auth
 {
@@ -16,16 +12,9 @@ namespace ChatWithMe.Core.Logic.Auth
             _database = database;
         }
 
-        public async void Register(string username, string email, string password)
+        public void Register(string username, string email, string password)
         {
-            await _database.Users.Save(new UserEntity
-            {
-                Email = "test",
-                Password = "testpswrd",
-                Description = "test",
-                Status = UserStatus.Active,
-                Username = "username"
-            });
+            throw new System.NotImplementedException();
         }
 
         public void Logout()

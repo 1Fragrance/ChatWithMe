@@ -11,7 +11,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ChatWithMe.Common\ChatWithMe.Common.csproj" />
-      <ProjectReference Include="..\ChatWithMe.Storage\ChatWithMe.Storage.csproj" />
+      <ProjectReference Include="..\ChatWithMe.Storage\ChatWithMe.DataStorage.csproj" />
     </ItemGroup>
 
 </Project>

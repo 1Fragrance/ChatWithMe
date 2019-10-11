@@ -7,9 +7,6 @@ namespace ChatWithMe.DataStorage.Abstractions
     /// </summary>
     public abstract class FilterBase
     {
-        /// <summary>
-        /// Entity identificator
-        /// </summary>
-        public ObjectId? ObjectId { get; set; }
+
     }
 }

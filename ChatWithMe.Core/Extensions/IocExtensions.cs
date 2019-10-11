@@ -1,5 +1,6 @@
 ﻿using ChatWithMe.Core.Interfaces;
 using ChatWithMe.Core.Logic.Auth;
+using ChatWithMe.DataStorage;
 using ChatWithMe.Storage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

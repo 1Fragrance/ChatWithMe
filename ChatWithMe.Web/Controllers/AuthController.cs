@@ -20,6 +20,7 @@ namespace ChatWithMe.Web.Controllers
         [HttpGet]
         public IActionResult SignUp()
         {
+            
             return View();
         }
 

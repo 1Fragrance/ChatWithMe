@@ -1,4 +1,6 @@
-﻿namespace ChatWithMe.Common
+﻿using System.Collections.Generic;
+
+namespace ChatWithMe.Common
 {
     /// <summary>
     /// Application config
@@ -8,9 +10,11 @@
         public AppConfig()
         {
             MongoConfig = new MongoDbConfig();
+            IdentityConfig = new IdentityConfig();
         }
 
         public MongoDbConfig MongoConfig { get; set; }
+        public IdentityConfig IdentityConfig { get; set; }
     }
 
     /// <summary>
@@ -22,4 +26,7 @@
         public string Database { get; set; }
     }
 
+    public class IdentityConfig
+    {
+    }
 }
